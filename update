@@ -1,0 +1,30 @@
+#!/bin/bash
+
+cd shared
+if [ -d "db" ]; then
+    cd db
+    echo "Updating t3kit_db ..."
+    if [ -z "$(git status --porcelain)" ]; then
+        git submodule update --init
+        echo -en "\033[38;5;86mDone\033[0m\n"
+    else
+        echo -en "\033[38;5;124mError - Uncommitted changes in t3kit_db\033[0m\n"
+    fi
+    cd ..
+fi
+
+if [ -d "site" ]; then
+    cd site
+    echo "Updating t3kit ..."
+    if [ -z "$(git status --porcelain)" ]; then
+        git submodule update --init --recursive
+        cd TYPO3.CMS
+        composer install
+        cd ..
+        echo -en "\033[38;5;86mDone\033[0m\n"
+    else
+        echo -en "\033[38;5;124mError - Uncommitted changes in t3kit\033[0m\n"
+    fi
+    cd ..
+fi
+cd ..
