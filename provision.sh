@@ -61,6 +61,23 @@ if [ $RESTART_APACHE = "1" ]; then
     service apache2 restart > /dev/null 2>&1
 fi
 
+# Adding checks to see if some symlinks are correct (windows fix, t3kit uses symlinks, must be done from inside vagrant vm)
+cd /var/www/shared/site
+if [ ! -L typo3_src ]; then
+    rm typo3_src/ -rf
+    ln -s TYPO3.CMS typo3_src
+    echo -e "Created symlink typo3_src to TYPO3.CMS"
+fi;
+if [ ! -L index.php ]; then
+    rm index.php
+    ln -s typo3_src/index.php index.php
+    echo -e "Created symlink index.php to typo3_src/index.php"
+fi;
+if [ ! -L typo3 ]; then
+    rm typo3/ -rf
+    ln -s typo3_src/typo3 typo3
+    echo -e "Created symlink typo3 to typo3_src/typo3"
+fi;
 
 echo "Provision complete!"
 sleep 2
