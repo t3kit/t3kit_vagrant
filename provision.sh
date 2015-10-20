@@ -65,6 +65,7 @@ fi
 cd /var/www/shared/site
 if [ ! -L typo3_src ]; then
     rm typo3_src/ -rf
+    rm typo3_src -rf
     ln -s TYPO3.CMS typo3_src
     echo -e "Created symlink typo3_src to TYPO3.CMS"
 fi;
@@ -75,6 +76,7 @@ if [ ! -L index.php ]; then
 fi;
 if [ ! -L typo3 ]; then
     rm typo3/ -rf
+    rm typo3 -rf
     ln -s typo3_src/typo3 typo3
     echo -e "Created symlink typo3 to typo3_src/typo3"
 fi;
