@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
 
     # Configure port forwards
     config.vm.network "forwarded_port", guest: 80, host: 8081   # Web
-    #config.vm.network "forwarded_port", guest: 8080, host: 8080 # Solr (not installed)
+    config.vm.network "forwarded_port", guest: 8080, host: 8080 # Solr
     config.vm.network "forwarded_port", guest: 1080, host: 1080 # Mailcatcher
     config.vm.network "forwarded_port", guest: 3306, host: 3307 # MySql
 
