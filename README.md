@@ -8,7 +8,7 @@
 #### Required dependencies:
 
 * [Git](https://git-scm.com/)
-* [Composer](https://getcomposer.org/)
+* [PHP 5.6](http://php.net/downloads.php) with openssl and fileinfo extension enabled & [Composer](https://getcomposer.org/)
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://www.vagrantup.com)
 
@@ -144,3 +144,11 @@ Please ensure any pull requests of fixes **follow this closely**. If you notice 
 4. Add git tag: `git tag 1.0.2`
 5. Push to the server: `git push`
 6. Push tags to the server: `git push --tags`
+
+***
+
+##Windows specific
+
+1. curl shipped with vagrant might be wrong, please download new one and replace it: http://curl.haxx.se/latest.cgi?curl=win64-ssl-sspi
+2. there is a known problem with windows 10 virtualbox, please tryt following workarounds if they work for you - https://laracasts.com/discuss/channels/general-discussion/windows-10-vagrant-virtualbox-homestead
+
