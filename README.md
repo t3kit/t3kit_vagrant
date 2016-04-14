@@ -150,5 +150,5 @@ Please ensure any pull requests of fixes **follow this closely**. If you notice 
 ##Windows specific
 
 1. curl shipped with vagrant might be wrong, please download new one and replace it: http://curl.haxx.se/latest.cgi?curl=win64-ssl-sspi
-2. there is a known problem with windows 10 virtualbox, please tryt following workarounds if they work for you - https://laracasts.com/discuss/channels/general-discussion/windows-10-vagrant-virtualbox-homestead
+2. there is a known problem with windows 10 virtualbox, please try the following workarounds if they work for you - https://laracasts.com/discuss/channels/general-discussion/windows-10-vagrant-virtualbox-homestead
 
