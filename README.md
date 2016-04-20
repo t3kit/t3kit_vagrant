@@ -2,6 +2,7 @@
 
 ## Vagrant/virtualbox development environment for [t3kit](https://github.com/t3kit/t3kit) project.
 [![Travis](https://img.shields.io/badge/t3kit-7.0.0-green.svg?style=flat-square)]()
+[![Release](https://img.shields.io/github/release/t3kit/t3kit_vagrant.svg?style=flat-square)](https://github.com/t3kit/t3kit_vagrant/releases)
 
 ### [CHANGELOG](https://github.com/t3kit/t3kit_vagrant/blob/master/CHANGELOG.md)
 
@@ -92,15 +93,6 @@ If you have a question(feature) not covered in the documentation or want to repo
 * Follow [Git commit conventions](https://github.com/t3kit/t3kit_vagrant#git-commit-conventions-and-output-formatting)
 * Write a convincing description of your PR and why we should land it
 
-
-## Internal Fixes `t3kit team`
-
-* Non-trivial changes should be discussed in **t3kit team**
-* Master branch only for releases, so all development should be on `dev` branch.
-* Follow [Style Guides](https://github.com/t3kit/t3kit_vagrant#style-guide)
-* Follow [Git commit conventions](https://github.com/t3kit/t3kit_vagrant#git-commit-conventions-and-output-formatting)
-* Keep in mind how to make [release](https://github.com/t3kit/t3kit_vagrant#how-to-make-release-of-t3kit_vagrant)
-
 ***
 
 ## Style Guide
@@ -108,47 +100,28 @@ This project uses special style guides. Those rules you can find on appropriate 
 
 * [editorconfig](http://editorconfig.org)
 
-## Git commit conventions and output formatting
-Please use semantic labels for your messages, but if commit message is not very important, you can skip labels. All commits with labels will be added in changelog, that's why it is important to use labels on your commits.
-####Git labels:
-* [FEATURE] A new feature
-* [FIX] A bug fix
-* [DOC] Documentation
-* [STYLE] Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-* [TEST] Adding missing tests
-* [CHORE] Changes to the build process or auxiliary tools, extensions and libraries
 
-Examples:
-* '[CHORE] update submodules'
-* '[CHORE] add new Vagrant configuration'
-* '[CHORE] update TYPO3 to 7.5.0'
-* '[FIX] fix provision bug'
-* '[TEST] add test for subscribe form on start page'
-* '[TEST] implement CI tests'
-* '[DOC] update changelog'
-* '[DOC] add requirements info'
-* '[FEATURE] add google map'
-* '[FEATURE] add new content element'
-* 'fix link in documentation'
-* 'add new db path to vagrant config'
+## Git commit conventions and output formatting
+Please use semantic labels for your messages, but if commit message is not very important, you can skip labels. All commits with labels will be added in changelog, that's why it is **important to use predefined labels** on your commits.
+
+####Git labels:
+* **[FEATURE]** A new feature
+* **[FIX]** A bug fix
+* **[REFACTOR]** A code change that neither fixes a bug or adds a feature
+* **[PERF]** A code change that improves performance.
+* **[CHORE]** Changes to the build process (grunt) or auxiliary tools and libraries such as documentation generation and linters (jshint, jscs, etc.)
+* **[DOC]** Documentation only changes
+* **[STYLE]** Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* **[TEST]** Adding missing tests
+* **[UPDATE]** Updating git submodules, npm/bower dependencies
+
 
 Please ensure any pull requests of fixes **follow this closely**. If you notice existing code which doesn't follow these practices, feel free to shout and we will address this.
 
 ***
 
-##How to make release of t3kit_vagrant
-1. Test last commit on `dev` branch
-2. Update and commit **documentation** and **changelog**
-2. Checkout to `master` branch: `git checkout master`
-3. Marge `dev` branch into `master` using no-fast-forward merging: `git marge --no-ff dev -m 'Release 1.0.2`
-4. Add git tag: `git tag 1.0.2`
-5. Push to the server: `git push`
-6. Push tags to the server: `git push --tags`
-
-***
 
 ##Windows specific
 
 1. curl shipped with vagrant might be wrong, please download new one and replace it: http://curl.haxx.se/latest.cgi?curl=win64-ssl-sspi
 2. there is a known problem with windows 10 virtualbox, please try the following workarounds if they work for you - https://laracasts.com/discuss/channels/general-discussion/windows-10-vagrant-virtualbox-homestead
-
