@@ -1,7 +1,7 @@
 # t3kit_vagrant
 
 ## Vagrant/virtualbox development environment for [t3kit](https://github.com/t3kit/t3kit) project.
-[![Travis](https://img.shields.io/badge/t3kit-7.0.0-green.svg?style=flat-square)]()
+
 [![Release](https://img.shields.io/github/release/t3kit/t3kit_vagrant.svg?style=flat-square)](https://github.com/t3kit/t3kit_vagrant/releases)
 
 ### [CHANGELOG](https://github.com/t3kit/t3kit_vagrant/blob/master/CHANGELOG.md)
