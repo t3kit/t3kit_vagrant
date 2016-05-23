@@ -7,7 +7,10 @@ Vagrant.configure("2") do |config|
     config.vm.box_check_update = true
 
     config.vm.network "private_network", ip: "192.168.3.3"
-    config.vm.synced_folder "./shared", "/var/www/shared", type: "nfs"
+    #config.vm.synced_folder "./shared", "/var/www/shared", type: "nfs"
+    config.vm.synced_folder "./shared", "/var/www/shared",
+        :nfs => true,
+        :linux__nfs_options => ['rw','no_subtree_check','all_squash','async']
 
     # Disable default shared folder
     config.vm.synced_folder ".", "/vagrant", disabled: true
@@ -17,6 +20,7 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 8080, host: 8080 # Solr
     config.vm.network "forwarded_port", guest: 1080, host: 1080 # Mailcatcher
     config.vm.network "forwarded_port", guest: 3306, host: 3307 # MySql
+    config.vm.network "forwarded_port", guest: 28778, host: 28778 # log.io
 
     #Omit some terminal errors
     config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
