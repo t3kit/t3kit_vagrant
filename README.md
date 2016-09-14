@@ -17,9 +17,17 @@
 
 ***
 
-## First Startup
+## First Startup using git submodules:
 1. After first clone you need to get all submodules and install composer deppendencies: `./init.sh`
 2. Start virtual machine `vagrant up`
+
+## Setup t3kit using Composer Dependency Manager:
+
+- `git clone git@github.com:t3kit/t3kit_vagrant.git`
+- `cd t3kit_vagrant`
+- `./initWithComposer.sh`
+- `vagrant up`
+- open in browser: `localhost:8081`
 
 
 ### Some important commands
