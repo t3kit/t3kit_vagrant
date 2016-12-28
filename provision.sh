@@ -13,7 +13,7 @@ RESTART_MYSQL="0"
 
 if [ -f /var/www/shared/db/$DATABASE.sql ]; then
     echo -e "Installing/updating DB $DATABASE... \r30% "
-    mysql -uroot -p1234 -e "CREATE DATABASE IF NOT EXISTS $DATABASE CHARACTER SET utf8 COLLATE utf8_swedish_ci;"
+    mysql -uroot -p1234 -e "CREATE DATABASE IF NOT EXISTS $DATABASE CHARACTER SET utf8 COLLATE utf8_general_ci;"
     mysql -uroot -p1234 -e "GRANT ALL PRIVILEGES ON $DATABASE.* TO '$USERNAME'@localhost IDENTIFIED BY '$PASSWORD';"
     mysql -uroot -p1234 $DATABASE < /var/www/shared/db/$DATABASE.sql
     RESTART_MYSQL="1"
