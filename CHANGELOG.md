@@ -1,4 +1,10 @@
 
+#### v0.2.1 `January 24, 2017`
+- **[DOC]** add additional requirements to README ([c7c899d](https://github.com/t3kit/t3kit_vagrant/commit/c7c899d))
+- **[BUGFIX]** English should be default locale (Podio bug_58) ([3895b39](https://github.com/t3kit/t3kit_vagrant/commit/3895b39))
+
+***
+
 #### v0.2.0 `October 19, 2016`
 - **[DOC]** add info how to install t3kit using Composer ([b0292d3](https://github.com/t3kit/t3kit_vagrant/commit/b0292d3))
 - **[FEATURE]** add initWithComposer script ([f4a0fbd](https://github.com/t3kit/t3kit_vagrant/commit/f4a0fbd))
