@@ -15,6 +15,10 @@
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](http://www.vagrantup.com)
 
+#### Additional requirements
+- Existing GitHub user account with added [SSH key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+- Existing Bitbucket user account with added [SSH key](https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html)
+
 ***
 
 ## First Startup using git submodules:
