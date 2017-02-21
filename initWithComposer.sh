@@ -17,4 +17,10 @@ cd site
 if [ ! -d .git ]; then
     git clone https://github.com/t3kit/t3kit_composer.git .
     composer install
+
+    cd typo3conf/ext/theme_t3kit
+    git submodule update --init
+
+    cd ../theme_t3kit_bluemountain
+    git submodule update --init
 fi;
