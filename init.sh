@@ -6,7 +6,7 @@ if [ ! -d "db" ]; then
 fi
 cd db
 if [ ! -d .git ]; then
-    git clone https://github.com/t3kit/t3kit_db.git .
+    git clone -b t3kit7 https://github.com/t3kit/t3kit_db.git .
 fi;
 cd ..
 
@@ -15,9 +15,9 @@ if [ ! -d "site" ]; then
 fi
 cd site
 if [ ! -d .git ]; then
-    git clone https://github.com/t3kit/t3kit.git .
+    git clone -b t3kit7 https://github.com/t3kit/t3kit.git .
     git submodule update --init --recursive
 fi;
 cd TYPO3.CMS
-composer install
+composer install --no-dev
 cd ../../..
